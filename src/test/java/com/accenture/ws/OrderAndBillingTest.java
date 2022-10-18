@@ -72,7 +72,7 @@ public class OrderAndBillingTest {
         // Get Data by ID
         Order order = orderRepository.findById(Long.valueOf(1)).get();
         // Using Setter
-        order.setOrderName("Today's Brew");
+        order.setOrderName("Cafe Latte");
         order.setPrice(3.5);
         order.setDiscounted(true);
         // Check if discount == true then discountpercentage 5
@@ -85,7 +85,7 @@ public class OrderAndBillingTest {
         orderRepository.save(order);
 
         // Update will be success and also check same expected and actual
-        Assertions.assertThat(order.getOrderName()).isEqualTo("Today's Brew");
+        Assertions.assertThat(order.getOrderName()).isEqualTo("Cafe Latte");
     }
 
     @Test
